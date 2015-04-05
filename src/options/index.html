@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf8">
+      <title>Key-ncognito options</title>
+      <link rel="stylesheet" href="css/semantic.min.css">
+      <link rel="stylesheet" href="css/key-ncognito.css">
+</head>
+<body>
+  <article class="centered">
+    <section class="heading">
+      <h1 class="ui block header">
+        <img src="img/key-ncognito.png" alt="Key-ncognito icon">
+        <div class="content">
+          Key-incognito
+          <div class="sub header">
+            <code>/kʰiːnkɒɡˈniːtoʊ/</code>
+          </div>
+        </div>
+      </h1>
+    </section>
+
+    <section class="ui intro segment top attached">
+      <p><code>Key-ncognito</code> is an extension for easily opening link in incognito mode.</p>
+      <p>You can select which modifier keys you want to use while clicking on a link to open it in incognito mode below.</p>
+    </section>
+
+    <section class="ui settings segment attached">
+      <form class="ui form">
+        <div class="two fields">
+          <div class="inline field">
+            <div class="ui toggle checkbox alt key">
+              <input id="alt-key" type="checkbox">
+              <label for="alt-key"> <code>Alt</code> Key</label>
+            </div>
+          </div>
+
+          <div class="inline field">
+            <div class="ui toggle checkbox ctrl key">
+              <input id="ctrl-key" type="checkbox">
+              <label for="ctrl-key"> <code>Ctrl</code> Key</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="two fields">
+          <div class="inline field">
+            <div class="ui toggle checkbox shift key">
+              <input id="shift-key" type="checkbox">
+              <label for="shift-key"><code>Shift</code> Key</label>
+            </div>
+          </div>
+
+          <div class="inline field ui toggle checkbox">
+            <div class="ui toggle checkbox meta key">
+              <input id="meta-key" type="checkbox">
+              <label for="meta-key"><code>Meta</code> Key</label>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section class="ui message info foot-note attached">
+      <div class="content">The <code>Meta</code> key could be the <code>Command</code> Key, the <code>Win</code> Key, <code>Context/Menu</code> Key or any other system determined key.</div>
+    </section>
+
+    <section class="ui message info foot-note attached">
+      <div class="content">You will have to refresh pages to use the new settings.</div>
+    </section>
+
+    <section class="ui message warning foot-note attached bottom">
+      <div class="content">Not all key combinations are possible, e.g. Ctrl + click is used for right clicking on OS X and cannot be overridden. </div>
+    </section>
+
+  </article>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/semantic.min.js"></script>
+  <script src="js/key-ncognito.js"></script>
+</body>
+</html>

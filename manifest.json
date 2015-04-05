@@ -14,10 +14,12 @@
     "persistent": true
   },
   "permissions": [
+    "storage",
     "tabs",
     "https://*/*",
     "http://*/*"
   ],
+  "options_page": "src/options/index.html",
   "content_scripts": [
     {
       "matches": [
