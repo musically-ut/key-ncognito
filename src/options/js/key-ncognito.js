@@ -7,10 +7,10 @@ function saveSettings() {
     var ctrlKeySetting  = $('.ui.checkbox.ctrl').checkbox('is checked');
 
     chrome.storage.sync.set(
-        { altKey: altKeySetting,
-          shiftKey: shiftKeySetting,
-          metaKey: metaKeySetting,
-          ctrlKey: ctrlKeySetting
+        { altKey   : altKeySetting,
+          shiftKey : shiftKeySetting,
+          metaKey  : metaKeySetting,
+          ctrlKey  : ctrlKeySetting
         },
         function () {
             if (chrome.runtime.lastError) {

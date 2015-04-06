@@ -2,13 +2,13 @@ var body = document.getElementsByTagName('body')[0];
 var altKeyNeeded   = true,
     shiftKeyNeeded = false,
     metaKeyNeeded  = true,
-    ctrKeyNeeded   = false;
+    ctrlKeyNeeded  = false;
 
 chrome.storage.sync.get(
     { shiftKey : shiftKeyNeeded,
       metaKey  : metaKeyNeeded,
       altKey   : altKeyNeeded,
-      ctrlKey  : altKeyNeeded
+      ctrlKey  : ctrlKeyNeeded
     },
     function (settings) {
         if (settings) {
