@@ -1,5 +1,8 @@
+# 0.1.2
+  - Fix a ctrl/alt key bug.
+
 # 0.1.1
-  - Improve copy
+  - Improve copy.
 
 # 0.1.0
   - Add settings page.
