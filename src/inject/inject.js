@@ -30,7 +30,9 @@ body.addEventListener('click', function (ev) {
         (ev.metaKey  === metaKeyNeeded)  &&
         (ev.shiftKey === shiftKeyNeeded) &&
         (ev.ctrlKey  === ctrlKeyNeeded)  &&
-        ev.target.nodeName.toUpperCase() === "A") {
+        ev.target.nodeName.toUpperCase() === "A" &&
+        !ev.defaultPrevented
+        ) {
         ev.preventDefault();
         chrome.extension.sendMessage(
             { url: ev.target.href },
