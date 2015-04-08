@@ -30,19 +30,27 @@ body.addEventListener('click', function (ev) {
         (ev.metaKey  === metaKeyNeeded)  &&
         (ev.shiftKey === shiftKeyNeeded) &&
         (ev.ctrlKey  === ctrlKeyNeeded)  &&
-        ev.target.nodeName.toUpperCase() === "A" &&
         !ev.defaultPrevented
         ) {
-        ev.preventDefault();
-        chrome.extension.sendMessage(
-            { url: ev.target.href },
-            function(resp) {
-                if (resp) {
-                    console.log('Opened URL: ', ev.target.href, ' in a new incognito window.');
-                } else {
-                    console.error('Failed to open the URL: ', ev.target.href);
+
+        var targetElement = ev.target;
+        while(targetElement !== null && targetElement.nodeName.toUpperCase() !== "A") {
+            targetElement = targetElement.parentElement;
+        }
+
+        // Proceed only if an A element was found in the ev.target's ancestry
+        if (targetElement !== null) {
+            ev.preventDefault();
+            chrome.extension.sendMessage(
+                { url: targetElement.href },
+                function(resp) {
+                    if (resp) {
+                        console.log('Opened URL: ', targetElement.href, ' in a new incognito window.');
+                    } else {
+                        console.error('Failed to open the URL: ', targetElement.href);
+                    }
                 }
-            }
-        );
+            );
+        }
     }
 });
