@@ -1,3 +1,7 @@
+# 0.2.0
+  - Handle clicks on elements inside anchor tags.
+  - If the website wouldn't have opened a link, neither will this plugin.
+
 # 0.1.2
   - Fix a ctrl/alt key bug.
 
