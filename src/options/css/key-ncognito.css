@@ -3,3 +3,7 @@
   margin: auto;
   margin-top: 1.25rem;
 }
+
+.message.disabled {
+  opacity: 0.3;
+}
