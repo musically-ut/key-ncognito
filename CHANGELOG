@@ -1,3 +1,6 @@
+# 1.0.0
+  - Reuse open windows if the plugin is allowed incognito.
+
 # 0.2.0
   - Handle clicks on elements inside anchor tags.
   - If the website wouldn't have opened a link, neither will this plugin.
