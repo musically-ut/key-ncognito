@@ -24,6 +24,37 @@ function saveSettings() {
     );
 }
 
+function behavior() {
+
+    function enableElem($elem) {
+        $elem.removeClass('disabled')
+             .addClass('positive');
+    }
+
+    function disableElem($elem) {
+        $elem.removeClass('positive')
+             .addClass('disabled');
+    }
+
+    chrome.extension.isAllowedIncognitoAccess(function (isAllowedAccess) {
+        if (isAllowedAccess) {
+            enableElem($('.reuse-window'));
+            disableElem($('.new-window'));
+        } else {
+            enableElem($('.new-window'));
+            disableElem($('.reuse-window'));
+        }
+    });
+}
+
+behavior();
+
+$('.extension-link').on('click', function () {
+    chrome.tabs.create({
+        url: 'chrome://extensions/?id=' + chrome.runtime.id
+    });
+});
+
 var altKeyNeeded   = true,
     shiftKeyNeeded = false,
     metaKeyNeeded  = true,
