@@ -83,7 +83,7 @@ chrome.storage.sync.get(
             });
         } else {
             console.error(
-                'Key-ncognito extension: (', chrom.runtine.id, '): ',
+                'Key-ncognito extension: (', chrome.runtine.id, '): ',
                 chrome.runtime.lastError,
                 ' while retrieving settings.'
             );
