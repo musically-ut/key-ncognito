@@ -1,5 +1,13 @@
 $(function () {
 
+function bindTestLink() {
+    $('.test-config')
+        .off('click.key-ncognito')
+        .on('click.key-ncognito', keyncognitoHandler());
+}
+
+bindTestLink();
+
 function saveSettings() {
     var altKeySetting   = $('.ui.checkbox.alt').checkbox('is checked');
     var shiftKeySetting = $('.ui.checkbox.shift').checkbox('is checked');
@@ -13,6 +21,7 @@ function saveSettings() {
           ctrlKey  : ctrlKeySetting
         },
         function () {
+            bindTestLink();
             if (chrome.runtime.lastError) {
                 console.error(
                     'Key-ngcognito (' + chrome.runtime.id + ') :',
@@ -25,7 +34,6 @@ function saveSettings() {
 }
 
 function behavior() {
-
     function enableElem($elem) {
         $elem.removeClass('disabled')
              .addClass('positive');

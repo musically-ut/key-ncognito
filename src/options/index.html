@@ -22,10 +22,11 @@
 
     <section class="ui intro segment top attached">
       <p><code>Key-ncognito</code> is an extension for easily opening links in incognito mode.</p>
-      <p>You can select which modifier keys you want to use while clicking on a link to open it in incognito mode below.</p>
     </section>
 
     <section class="ui settings segment attached">
+
+      <p>You can select which modifier keys you want to use while clicking on a link to open it in incognito mode:</p>
       <form class="ui form">
         <div class="two fields">
           <div class="inline field">
@@ -63,31 +64,37 @@
     </section>
 
     <section class="ui tab-behavior segment attached">
-        <p>Clicking on a link with the above combination will ...</p>
+      <p>Clicking on a link with the above combination will ...</p>
 
-        <div class="ui two column middle aligned relaxed fitted stackable grid" style="position:relative">
-          <div class="center aligned column">
-            <div class="ui message new-window positive">open a new incognito window.</div>
-          </div>
-          <div class="ui vertical divider">
-            Or
-          </div>
-          <div class="center aligned column">
-            <div class="ui message reuse-window disabled">reuse an open window.</div>
-          </div>
+      <div class="ui two column middle aligned relaxed fitted stackable grid" style="position:relative">
+        <div class="center aligned column">
+          <div class="ui message new-window positive">open a new incognito window.</div>
         </div>
-
-        <div class="ui horizontal divider"></div>
-
-        <div>
-          <p>If you enable this extension in incognito mode, any already opened
-          incognito windows will be reused for opening new links. Otherwise, a
-          new window will be opened for each link.</p>
+        <div class="ui vertical divider">
+          Or
         </div>
+        <div class="center aligned column">
+          <div class="ui message reuse-window">reuse an open window.</div>
+        </div>
+      </div>
 
-        <button type="button" class="ui fluid blue button inline extension-link">
-          <i class="settings icon"></i>Configure Extension
-        </button>
+      <div class="ui horizontal divider"></div>
+
+      <div>
+        <p>If you <em>enable this extension in incognito mode</em>, any already opened
+        incognito windows will be reused for opening new links. Otherwise, a
+        new window will be opened for each link.</p>
+      </div>
+
+      <button type="button" class="ui fluid button tiny inline extension-link">
+        <i class="settings icon"></i>Change this behavior
+      </button>
+
+      <div class="ui horizontal divider">Test your settings here</div>
+
+      <a target="blank_" href="http://en.wikipedia.org/wiki/Special:Random" class="ui fluid teal button inline test-config">
+        <i class="external icon"></i>Click here with modifier keys
+      <a>
     </section>
 
     <section class="ui message info foot-note attached">
@@ -106,6 +113,7 @@
 
   <script src="js/jquery.min.js"></script>
   <script src="js/semantic.min.js"></script>
+  <script src="../inject/handler.js"></script>
   <script src="js/key-ncognito.js"></script>
 </body>
 </html>
