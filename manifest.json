@@ -1,6 +1,6 @@
 {
   "name": "Key-ncognito",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "manifest_version": 2,
   "description": "Use a keyboard shortcut to open links incognito.",
   "homepage_url": "http://musicallyut.in",
@@ -30,7 +30,7 @@
         "src/inject/handler.js",
         "src/inject/inject.js"
       ],
-      "run_at": "document_idle",
+      "run_at": "document_end",
       "all_frames": true
     }
   ]
