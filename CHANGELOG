@@ -1,3 +1,6 @@
+# 1.2.0
+  - Run extension on `document_end` instead of `document_idle`.
+
 # 1.1.0
   - Allow testing on the settings page.
 
