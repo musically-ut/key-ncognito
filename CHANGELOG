@@ -1,3 +1,7 @@
+# 1.3.0
+  - Add a button on the options page to go to the feedback page
+  - Add a button on the options page to go to the ratings page
+
 # 1.2.0
   - Run extension on `document_end` instead of `document_idle`.
 
