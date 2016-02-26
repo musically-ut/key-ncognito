@@ -1,3 +1,11 @@
+'use strict';
+
+chrome.runtime.onInstalled.addListener(function (details) {
+    if (details.reason === "install" || details.reason === "update") {
+        chrome.runtime.openOptionsPage();
+    }
+});
+
 chrome.extension.onMessage.addListener(
     function(request, sender, sendResponse) {
         console.log("Attempting to open URL incognito: ", request.url);
