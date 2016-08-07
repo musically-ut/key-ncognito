@@ -1,6 +1,6 @@
 {
   "name": "Key-ncognito",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "manifest_version": 2,
   "description": "Use a keyboard shortcut to open links incognito.",
   "homepage_url": "http://musicallyut.in",
@@ -20,6 +20,9 @@
     "http://*/*"
   ],
   "options_page": "src/options/index.html",
+  "options_ui": {
+    "page": "src/options/index.html"
+  },
   "content_scripts": [
     {
       "matches": [
