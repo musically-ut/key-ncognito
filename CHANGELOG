@@ -1,3 +1,6 @@
+# 1.4.1
+  - Remove the divider from the settings page to work-around Semantic UI bug
+
 # 1.4.0
   - Open the Settings page on plugin update/install
   - Add a button on options page to go to the Github project
