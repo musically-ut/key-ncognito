@@ -1,6 +1,6 @@
 function keyncognitoHandler() {
-    var altKeyNeeded   = true,
-        shiftKeyNeeded = false,
+    var altKeyNeeded   = false,
+        shiftKeyNeeded = true,
         metaKeyNeeded  = true,
         ctrlKeyNeeded  = false;
 
@@ -42,7 +42,7 @@ function keyncognitoHandler() {
             // Proceed only if an A element was found in the ev.target's ancestry
             if (targetElement !== null) {
                 ev.preventDefault();
-                chrome.extension.sendMessage(
+                chrome.runtime.sendMessage(
                     { url: targetElement.href },
                     function(resp) {
                         if (resp) {
