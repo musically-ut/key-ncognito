@@ -27,7 +27,8 @@
     {
       "matches": [
         "https://*/*",
-        "http://*/*"
+        "http://*/*",
+        "file://*/*"
       ],
       "js": [
         "src/inject/handler.js",
