@@ -1,3 +1,7 @@
+# 2.0.0
+  - Add browser action to open current tab's URL incognito.
+  - Also work on `file://` URLs.
+
 # 1.5.0
   - Use embedded options page instead of in a new tab.
   - Change the default keys to be Meta + Shift instead of Meta + Alt.
